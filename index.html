@@ -3,58 +3,153 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="AI Study Assistant - An AI-powered learning assistant for students."
+        content="AI Study Assistant helps students understand lessons, summarize topics, practice questions, and study smarter with AI."
     >
 
-    <title>AI Study Assistant</title>
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <title>AI Study Assistant — Learn Smarter</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="container">
+    <main class="app" id="app">
+
+        <!-- =========================
+             Header
+        ========================== -->
 
         <header class="header">
 
-            <div>
-                <h1>🤖 AI Study Assistant</h1>
+            <div class="brand">
 
-                <p>
-                    Your personal assistant for learning, explanations and practice.
-                </p>
+                <div class="brand-icon" aria-hidden="true">
+                    🤖
+                </div>
+
+                <div class="brand-content">
+
+                    <h1>
+                        AI Study Assistant
+                    </h1>
+
+                    <p>
+                        Learn smarter. Understand faster.
+                    </p>
+
+                </div>
+
             </div>
 
-            <button id="themeButton" class="theme-button">
+            <button
+                id="themeButton"
+                class="theme-button"
+                type="button"
+                aria-label="Switch to dark mode"
+                title="Toggle theme"
+            >
                 🌙
             </button>
 
         </header>
 
 
-        <section class="assistant-card">
+        <!-- =========================
+             AI Tutor
+        ========================== -->
 
-            <label for="questionInput">
-                Ask your study question
-            </label>
+        <section
+            class="assistant-card glass-card"
+            aria-labelledby="assistant-title"
+        >
 
-            <textarea
-                id="questionInput"
-                placeholder="Example: Explain photosynthesis in simple words..."
-                maxlength="1000"
-            ></textarea>
+            <div class="section-heading">
+
+                <span
+                    class="section-icon"
+                    aria-hidden="true"
+                >
+                    ✨
+                </span>
+
+                <div>
+
+                    <h2 id="assistant-title">
+                        Ask your AI Tutor
+                    </h2>
+
+                    <p>
+                        Ask questions, explain lessons, or practice a topic.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-wrapper">
+
+                <label
+                    for="questionInput"
+                    class="sr-only"
+                >
+                    Ask your study question
+                </label>
+
+                <textarea
+                    id="questionInput"
+                    name="question"
+                    placeholder="Example: Explain photosynthesis in simple words..."
+                    maxlength="1000"
+                    rows="5"
+                    autocomplete="off"
+                    spellcheck="true"
+                ></textarea>
+
+                <div class="input-footer">
+
+                    <span
+                        id="characterCount"
+                        class="character-count"
+                        aria-live="polite"
+                    >
+                        0 / 1000
+                    </span>
+
+                </div>
+
+            </div>
+
 
             <div class="actions">
 
-                <button id="askButton" class="primary-button">
-                    Ask AI 🤖
+                <button
+                    id="askButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    <span aria-hidden="true">✨</span>
+                    <span>Ask AI</span>
                 </button>
 
-                <button id="clearButton" class="secondary-button">
+                <button
+                    id="clearButton"
+                    class="secondary-button"
+                    type="button"
+                >
                     Clear
                 </button>
 
@@ -63,43 +158,230 @@
         </section>
 
 
-        <section class="answer-card">
+        <!-- =========================
+             AI Answer
+        ========================== -->
+
+        <section
+            class="answer-card glass-card"
+            aria-labelledby="answer-title"
+        >
 
             <div class="answer-header">
-                <h2>💡 AI Answer</h2>
+
+                <div class="section-heading">
+
+                    <span
+                        class="section-icon"
+                        aria-hidden="true"
+                    >
+                        💡
+                    </span>
+
+                    <div>
+
+                        <h2 id="answer-title">
+                            AI Answer
+                        </h2>
+
+                        <p>
+                            Your personalized explanation will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span
+                    id="answerStatus"
+                    class="status"
+                    aria-live="polite"
+                >
+                    Ready
+                </span>
+
             </div>
 
-            <div id="answer">
 
-                <p class="placeholder">
-                    Your AI answer will appear here.
-                </p>
+            <div
+                id="answer"
+                class="answer-content"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+
+                <div class="answer-placeholder">
+
+                    <span
+                        class="placeholder-icon"
+                        aria-hidden="true"
+                    >
+                        🤖
+                    </span>
+
+                    <p>
+                        Ask a question to start learning.
+                    </p>
+
+                    <span>
+                        Your AI tutor will explain the topic clearly and simply.
+                    </span>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <section class="quick-actions">
+        <!-- =========================
+             Quick Actions
+        ========================== -->
 
-            <h2>Quick Actions</h2>
+        <section
+            class="quick-actions"
+            aria-labelledby="quick-actions-title"
+        >
+
+            <div class="section-heading">
+
+                <span
+                    class="section-icon"
+                    aria-hidden="true"
+                >
+                    ⚡
+                </span>
+
+                <div>
+
+                    <h2 id="quick-actions-title">
+                        Quick Actions
+                    </h2>
+
+                    <p>
+                        Start studying with one click.
+                    </p>
+
+                </div>
+
+            </div>
+
 
             <div class="quick-grid">
 
-                <button data-question="Explain this topic in simple words.">
-                    📚 Explain
+                <button
+                    class="quick-action"
+                    type="button"
+                    data-action="explain"
+                    data-question="Explain this topic in simple words."
+                >
+
+                    <span
+                        class="quick-icon"
+                        aria-hidden="true"
+                    >
+                        📚
+                    </span>
+
+                    <span class="quick-content">
+
+                        <strong>
+                            Explain
+                        </strong>
+
+                        <small>
+                            Understand a topic
+                        </small>
+
+                    </span>
+
                 </button>
 
-                <button data-question="Summarize this topic for me.">
-                    📝 Summarize
+
+                <button
+                    class="quick-action"
+                    type="button"
+                    data-action="summarize"
+                    data-question="Summarize this topic clearly and highlight the most important points."
+                >
+
+                    <span
+                        class="quick-icon"
+                        aria-hidden="true"
+                    >
+                        📝
+                    </span>
+
+                    <span class="quick-content">
+
+                        <strong>
+                            Summarize
+                        </strong>
+
+                        <small>
+                            Get the key points
+                        </small>
+
+                    </span>
+
                 </button>
 
-                <button data-question="Create 5 practice questions about this topic.">
-                    ❓ Practice Questions
+
+                <button
+                    class="quick-action"
+                    type="button"
+                    data-action="practice"
+                    data-question="Create 5 practice questions about this topic."
+                >
+
+                    <span
+                        class="quick-icon"
+                        aria-hidden="true"
+                    >
+                        ❓
+                    </span>
+
+                    <span class="quick-content">
+
+                        <strong>
+                            Practice
+                        </strong>
+
+                        <small>
+                            Test your knowledge
+                        </small>
+
+                    </span>
+
                 </button>
 
-                <button data-question="Create a short quiz about this topic.">
-                    🎯 Create Quiz
+
+                <button
+                    class="quick-action"
+                    type="button"
+                    data-action="quiz"
+                    data-question="Create a short quiz about this topic."
+                >
+
+                    <span
+                        class="quick-icon"
+                        aria-hidden="true"
+                    >
+                        🎯
+                    </span>
+
+                    <span class="quick-content">
+
+                        <strong>
+                            Create Quiz
+                        </strong>
+
+                        <small>
+                            Challenge yourself
+                        </small>
+
+                    </span>
+
                 </button>
 
             </div>
@@ -107,10 +389,16 @@
         </section>
 
 
-        <footer>
+        <!-- =========================
+             Footer
+        ========================== -->
+
+        <footer class="footer">
 
             <p>
-                AI Study Assistant • Built with HTML, CSS & JavaScript
+                AI Study Assistant
+                <span aria-hidden="true">•</span>
+                Learn smarter with AI
             </p>
 
         </footer>
@@ -118,7 +406,7 @@
     </main>
 
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 
