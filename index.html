@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="AI Study Assistant - An AI-powered learning assistant for students."
+    >
+
+    <title>AI Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+
+            <div>
+                <h1>🤖 AI Study Assistant</h1>
+
+                <p>
+                    Your personal assistant for learning, explanations and practice.
+                </p>
+            </div>
+
+            <button id="themeButton" class="theme-button">
+                🌙
+            </button>
+
+        </header>
+
+
+        <section class="assistant-card">
+
+            <label for="questionInput">
+                Ask your study question
+            </label>
+
+            <textarea
+                id="questionInput"
+                placeholder="Example: Explain photosynthesis in simple words..."
+                maxlength="1000"
+            ></textarea>
+
+            <div class="actions">
+
+                <button id="askButton" class="primary-button">
+                    Ask AI 🤖
+                </button>
+
+                <button id="clearButton" class="secondary-button">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="answer-card">
+
+            <div class="answer-header">
+                <h2>💡 AI Answer</h2>
+            </div>
+
+            <div id="answer">
+
+                <p class="placeholder">
+                    Your AI answer will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-grid">
+
+                <button data-question="Explain this topic in simple words.">
+                    📚 Explain
+                </button>
+
+                <button data-question="Summarize this topic for me.">
+                    📝 Summarize
+                </button>
+
+                <button data-question="Create 5 practice questions about this topic.">
+                    ❓ Practice Questions
+                </button>
+
+                <button data-question="Create a short quiz about this topic.">
+                    🎯 Create Quiz
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                AI Study Assistant • Built with HTML, CSS & JavaScript
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
